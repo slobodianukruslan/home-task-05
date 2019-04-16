@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+body {
+	background-color: #D8D8D8;
+}
+
+/* Позиціонуємо доску по центру*/
+
+.chess {
+    border-collapse: collapse;
+    width: 600px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/*Задаємо розмірки клітинки*/
+
+.chess td {
+    width: 50px;
+    height: 50px;
+    border: solid gray 1px;
+}
+
+/* Задаємо для кожного парного/непарного рядка колір парної/непарної клітинки темної клітинки */
+
+tr:nth-child(odd) td:nth-child(odd) {
+    background: #000;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+    background: #000;
+}
+
+/* Задаємо для кожного парного/непарного рядка колір парної/непарної клітинки світлої клітинки */
+
+tr:nth-child(odd) td:nth-child(even) {
+    background: #fff;
+    opacity: 0.4;
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+    background: #fff;
+    opacity: 0.4;
+}
+
+/* Задаємо розстановку шашок на досці 1, 2, 3 рядки */
+
+tr:nth-child(1) td:nth-child(odd) .element {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #757578;
+    margin: 0 auto;
+    border: 3px solid #DBD8D8;
+    opacity: 0.75;
+}
+
+tr:nth-child(2) td:nth-child(even) .element {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #757578;
+    margin: 0 auto;
+    border: 3px solid #DBD8D8;
+    opacity: 0.75;
+}
+
+tr:nth-child(3) td:nth-child(odd) .element {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #757578;
+    margin: 0 auto;
+    border: 3px solid #DBD8D8;
+    opacity: 0.75;
+}
+
+/* Задаємо розстановку шашок на досці 6, 7, 8 рядки */
+
+tr:nth-child(6) td:nth-child(even) .element {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: brown;
+    margin: 0 auto;
+    border: 3px solid #D24A4A;
+    opacity: 0.75;
+}
+
+tr:nth-child(7) td:nth-child(odd) .element {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: brown;
+    margin: 0 auto;
+    border: 3px solid #D24A4A;
+    opacity: 0.75;
+}
+
+tr:nth-child(8) td:nth-child(even) .element {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: brown;
+    margin: 0 auto;
+    border: 3px solid #D24A4A;
+    opacity: 0.75;
+}
+
+/* Підсвічування наведеного елементу */
+
+.chess:hover .element:hover {
+	border: 3px solid #B2F2F3;
+	opacity: 1;	
+}
